@@ -79,16 +79,29 @@
               "angle": 0,
               "id": "fe7a25d6-92fa-4666-a50c-c9bb32786c9f",
               "z": 3,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Spoofing",
+                  "type": "Spoofing",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Angreifer gibt sich als Authentifizierungsdienst aus.\nWahrscheinlichkeit hoch, da oft \"Man in the Middle Angriffe\" benutzt werden.",
+                  "mitigation": "ssh kann solche Angriffe verhindern.",
+                  "threatId": "290b73af-65a4-4ca2-81a2-f41e65fe3c1a"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "2-Faktor Authe\nntifizierungsdie\nnst"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -182,7 +195,7 @@
               },
               "position": {
                 "x": 760,
-                "y": 497
+                "y": 470
               },
               "angle": 0,
               "id": "2c1cf0a0-837e-4604-9f00-d3f1ed1872e5",
@@ -207,34 +220,8 @@
                 "height": 100
               },
               "position": {
-                "x": 523,
-                "y": 281
-              },
-              "angle": 0,
-              "id": "9d675b23-f913-4c56-9769-0b6905e938a5",
-              "z": 8,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Kundentelefon\nanbieter"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 506,
-                "y": 500
+                "x": 516,
+                "y": 470
               },
               "angle": 0,
               "id": "3588725d-2f26-4e0b-8b09-d67d4907807b",
@@ -249,52 +236,6 @@
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "size": {
-                "width": 10,
-                "height": 10
-              },
-              "smooth": true,
-              "source": {
-                "id": "9d675b23-f913-4c56-9769-0b6905e938a5"
-              },
-              "target": {
-                "id": "3588725d-2f26-4e0b-8b09-d67d4907807b"
-              },
-              "vertices": [
-                {
-                  "x": 565,
-                  "y": 446
-                }
-              ],
-              "id": "1f7679cc-7bd4-4db5-88e5-81a86233409e",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.540387422333134,
-                    "offset": 1.2104897246793296
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "OTT",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 10,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -657,20 +598,32 @@
                   "y": 590
                 },
                 {
-                  "x": 688,
-                  "y": 452
+                  "x": 121,
+                  "y": 530
                 },
                 {
-                  "x": 760,
-                  "y": 456
+                  "x": 203,
+                  "y": 196
                 },
                 {
-                  "x": 867,
-                  "y": 477
+                  "x": 310,
+                  "y": 12
                 },
                 {
-                  "x": 864,
-                  "y": 616
+                  "x": 389,
+                  "y": 9
+                },
+                {
+                  "x": 792,
+                  "y": 1
+                },
+                {
+                  "x": 1063,
+                  "y": 257
+                },
+                {
+                  "x": 1064,
+                  "y": 537
                 }
               ],
               "id": "0ba1bcef-3ce0-42f3-8f5d-fb000f2c4b3d",
@@ -703,7 +656,7 @@
                 "id": "fe7a25d6-92fa-4666-a50c-c9bb32786c9f"
               },
               "target": {
-                "id": "9d675b23-f913-4c56-9769-0b6905e938a5"
+                "id": "3588725d-2f26-4e0b-8b09-d67d4907807b"
               },
               "vertices": [
                 {
@@ -748,16 +701,28 @@
               "angle": 0,
               "id": "ae7279e7-53bf-48fc-9131-a95abd86d413",
               "z": 22,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Denial of service",
+                  "title": "SIEM System lahm legen",
+                  "description": "SIEM System lahm legen und somit Überwachung ausschalten.\nBedrohung hoch, da man so dann den Authentifizierungsprozess unbemerkt angreifen könnte.",
+                  "mitigation": "SIEM System mit Log files sichern und regelmäßig überprüfen.",
+                  "threatId": "7de2bcc9-2fd9-47eb-a63f-3dc125af6227"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "SIEM System"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -844,22 +809,34 @@
                 "height": 100
               },
               "position": {
-                "x": 162,
-                "y": 239
+                "x": 202,
+                "y": 255
               },
               "angle": 0,
               "id": "85c0efc6-c8fa-45db-b4f9-6f1ebe60dc0a",
               "z": 25,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "modelType": "STRIDE",
+                  "type": "Tampering",
+                  "title": "Tampering - Fälschung Reports",
+                  "description": "Angreifer manipuliert Reports und gaukelt vor, alles wäre ok.\nLow, da Dienst intern davon nicht betroffen wäre.",
+                  "mitigation": "Reports werden durch Signaturen gesichert.",
+                  "threatId": "73c9e5cc-c82b-4771-b79a-d52e8c687955"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Management\nReport"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -978,16 +955,59 @@
               "angle": 0,
               "id": "ceb96a40-c18a-4ee1-b2f8-eb1dd04ae808",
               "z": 29,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Datenbankdaten werden manipuliert.\nWahrscheinlichkeit hoch, da Passwörter gehackt oder geleaked werden können. Somit könnte sich ein Angreifer Zugriff auf DB verschaffen.",
+                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken.",
+                  "threatId": "0a196069-fefd-46f9-8915-bc8b1054d65f"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Information disclosure",
+                  "title": "Information Disclosure",
+                  "description": "Daten aus der Datenbank werden gestohlen.\nWahrscheinlichkeit hoch, da Passwörter gehackt oder geleaked werden können. Somit könnte sich ein Angreifer Zugriff auf DB verschaffen.",
+                  "threatId": "afa2e363-d3eb-4ebf-8be6-2547816c8847",
+                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Denial of service",
+                  "title": "Denial of Service",
+                  "description": "Angreifer löscht die Datenbank.\nPriority hoch, da das den gesamten Authentifizierungsprozess lahm legen würde.",
+                  "mitigation": "Zugriff einschränken und Usern nur Leserechte geben",
+                  "threatId": "dfd15ce5-5716-4633-9267-35ef7fd8e14f"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Elevation of privilege",
+                  "title": "Elevation of privilege",
+                  "description": "Angreifer beschafft sich Schreibrechte auf Datenbank und manipuliert Daten.",
+                  "threatId": "6dfa86b0-415b-429d-b4c9-6ac5453c2841",
+                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Log Datenbank"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -1068,6 +1088,152 @@
                 }
               ],
               "z": 31,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 1,
+                "y": 170
+              },
+              "angle": 0,
+              "id": "41847ec3-ab20-4f3c-92ef-3d449f6367c0",
+              "z": 32,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Management"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "85c0efc6-c8fa-45db-b4f9-6f1ebe60dc0a"
+              },
+              "target": {
+                "id": "41847ec3-ab20-4f3c-92ef-3d449f6367c0"
+              },
+              "vertices": [
+                {
+                  "x": 62,
+                  "y": 348
+                }
+              ],
+              "id": "2c0f38e4-f2bb-42fa-822f-1552f3d035de",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "report",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 33,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 326,
+                "y": 349
+              },
+              "angle": 0,
+              "id": "168e1cfc-6072-474a-aae9-d812724a3072",
+              "z": 34,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Repudiation",
+                  "type": "Repudiation",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Angreifer leugnet Angriff ab.\nWahrscheinlichkeit hoch, da kein Angreifer sein Vergehen zugeben wird.\nBedrohung low, da nicht wichtig für das System.",
+                  "mitigation": "Überwachung (Ip Adressen speichern) von eingeloggten Usern.",
+                  "threatId": "80327764-39e3-48c6-a8b3-66c36c0d4930"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Angreifer"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "168e1cfc-6072-474a-aae9-d812724a3072"
+              },
+              "target": {
+                "id": "ceb96a40-c18a-4ee1-b2f8-eb1dd04ae808"
+              },
+              "vertices": [],
+              "id": "19519621-da3d-48b1-a421-0e8cc62193b2",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "greift an",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 35,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
