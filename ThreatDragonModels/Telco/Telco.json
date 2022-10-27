@@ -53,16 +53,28 @@
               "angle": 0,
               "id": "512ac33c-436b-4f36-9757-f180723a5680",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Spoofing",
+                  "title": "User wird bedroht",
+                  "description": "User zwingen Einlogdaten zu geben, um sich dann als diesen User auszugeben und sich einzuloggen.",
+                  "mitigation": "User auf Gefahren aufmerksam machen.\nRisiko wird dadurch nicht verändert. User sind oft unvorsichtig.",
+                  "threatId": "dad59155-6cf2-49f1-81a5-4334c8df40d5"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "User"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -510,6 +522,10 @@
                 {
                   "x": 216,
                   "y": 134
+                },
+                {
+                  "x": 193,
+                  "y": 131
                 }
               ],
               "id": "26eb524d-f8fb-4abb-86c9-88ccd739d2d2",
@@ -529,13 +545,25 @@
                 }
               ],
               "z": 18,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Information disclosure",
+                  "title": "OTT abfangen",
+                  "description": "Angreifer fängt zurückgesendeten OTT ab und benutzt ihn selbst zum einloggen.\nPrio hoch, da so der Angreifer Zugriff auf Kundenkonto bekommt. Erstmal sogar unbemerkt.",
+                  "mitigation": "ssh zur Verschlüsselung benutzen, um \"Man in the Middle\" Angriffe auszuschließen",
+                  "threatId": "bc998f7f-6cd0-4444-9605-694fbd2f2942"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -965,7 +993,7 @@
                   "status": "Open",
                   "severity": "High",
                   "description": "Datenbankdaten werden manipuliert.\nWahrscheinlichkeit hoch, da Passwörter gehackt oder geleaked werden können. Somit könnte sich ein Angreifer Zugriff auf DB verschaffen.",
-                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken.",
+                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken.\nRisiko wird auf low runtergestuft, da die DB gut geschützt ist. 100 % Schutz gibt es nicht.",
                   "threatId": "0a196069-fefd-46f9-8915-bc8b1054d65f"
                 },
                 {
@@ -976,7 +1004,7 @@
                   "title": "Information Disclosure",
                   "description": "Daten aus der Datenbank werden gestohlen.\nWahrscheinlichkeit hoch, da Passwörter gehackt oder geleaked werden können. Somit könnte sich ein Angreifer Zugriff auf DB verschaffen.",
                   "threatId": "afa2e363-d3eb-4ebf-8be6-2547816c8847",
-                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken."
+                  "mitigation": "Mit 2 Faktor Athentifizierung oder allgemein den Zugriff auf DB überwachen und einschränken.\n\nRisiko wird auf low runtergestuft, da die DB gut geschützt ist. 100 % Schutz gibt es nicht."
                 },
                 {
                   "status": "Open",
@@ -985,7 +1013,7 @@
                   "type": "Denial of service",
                   "title": "Denial of Service",
                   "description": "Angreifer löscht die Datenbank.\nPriority hoch, da das den gesamten Authentifizierungsprozess lahm legen würde.",
-                  "mitigation": "Zugriff einschränken und Usern nur Leserechte geben",
+                  "mitigation": "Zugriff einschränken und Usern nur Leserechte geben.",
                   "threatId": "dfd15ce5-5716-4633-9267-35ef7fd8e14f"
                 },
                 {
@@ -1174,7 +1202,7 @@
                 "height": 80
               },
               "position": {
-                "x": 326,
+                "x": 327,
                 "y": 349
               },
               "angle": 0,
