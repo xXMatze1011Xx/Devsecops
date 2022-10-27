@@ -1,7 +1,8 @@
 {
   "summary": {
     "title": "Telco",
-    "owner": "Marcel"
+    "owner": "Marcel",
+    "description": "Praktikum 1 decsecops"
   },
   "detail": {
     "contributors": [],
